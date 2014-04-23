@@ -16,24 +16,24 @@
 
 # OPPO ramfs bits
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/init.oppo.rc:root/init.oppo.rc \
-    device/oppo/find7/init.oppo.usb.rc:root/init.oppo.usb.rc
+    device/oppo/find7/ramdisk/init.oppo.rc:root/init.oppo.rc \
+    device/oppo/find7/ramdisk/init.oppo.usb.rc:root/init.oppo.usb.rc
 
 # QCOM ramfs bits
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/init.qcom.rc:root/init.qcom.rc \
-    device/oppo/find7/init.qcom.sh:root/init.qcom.sh \
-    device/oppo/find7/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
-    device/oppo/find7/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
-    device/oppo/find7/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
-    device/oppo/find7/init.qcom.factory.sh:root/init.qcom.factory.sh \
-    device/oppo/find7/init.qcom.ril.sh:root/init.qcom.ril.sh \
-    device/oppo/find7/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
-    device/oppo/find7/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
-    device/oppo/find7/init.qcom.usb.sh:root/init.qcom.usb.sh \
-    device/oppo/find7/init.qcom.wcnss3660.sh:root/init.qcom.wcnss3660.sh \
-    device/oppo/find7/fstab.qcom:root/fstab.qcom \
-    device/oppo/find7/ueventd.qcom.rc:root/ueventd.qcom.rc
+    device/oppo/find7/ramdisk/init.qcom.rc:root/init.qcom.rc \
+    device/oppo/find7/ramdisk/init.qcom.sh:root/init.qcom.sh \
+    device/oppo/find7/ramdisk/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
+    device/oppo/find7/ramdisk/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
+    device/oppo/find7/ramdisk/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
+    device/oppo/find7/ramdisk/init.qcom.factory.sh:root/init.qcom.factory.sh \
+    device/oppo/find7/ramdisk/init.qcom.ril.sh:root/init.qcom.ril.sh \
+    device/oppo/find7/ramdisk/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
+    device/oppo/find7/ramdisk/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
+    device/oppo/find7/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh \
+    device/oppo/find7/ramdisk/init.qcom.wcnss3660.sh:root/init.qcom.wcnss3660.sh \
+    device/oppo/find7/ramdisk/fstab.qcom:root/fstab.qcom \
+    device/oppo/find7/ramdisk/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 # Target (Find7) ramfs bits
 PRODUCT_COPY_FILES += \
