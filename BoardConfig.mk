@@ -104,23 +104,8 @@ TARGET_KERNEL_SOURCE := kernel/oppo/find7
 # The list below is order dependent
 BOARD_SEPOLICY_UNION += \
        app.te \
-       bluetooth.te \
        device.te \
-       domain.te \
-       drmserver.te \
-       file.te \
-       file_contexts \
-       hci_init.te \
-       init_shell.te \
-       keystore.te \
-       mediaserver.te \
-       kickstart.te \
-       nfc.te \
-       rild.te \
-       surfaceflinger.te \
-       system.te \
-       ueventd.te \
-       wpa.te
+       file_contexts
 
 HAVE_ADRENO_SOURCE:= false
 
