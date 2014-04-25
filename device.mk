@@ -172,13 +172,13 @@ PRODUCT_PACKAGES += \
     libaudio-resampler
 
 # Audio effects
-PRODUCT_PACKAGES += \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors
+#PRODUCT_PACKAGES += \
+#    libqcomvisualizer \
+#    libqcomvoiceprocessing \
+#    libqcomvoiceprocessingdescriptors
 
-PRODUCT_COPY_FILES += \
-    device/oppo/find7/audio_effects.conf:system/vendor/etc/audio_effects.conf
+#PRODUCT_COPY_FILES += \
+#    device/oppo/find7/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 PRODUCT_PACKAGES += \
     libqomx_core \

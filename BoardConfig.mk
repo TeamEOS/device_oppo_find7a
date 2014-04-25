@@ -1,3 +1,21 @@
+#
+# Copyright (C) 2014 TeamEOS
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+BOARD_VENDOR := oppo
+
 USE_CAMERA_STUB := true
 
 TARGET_CPU_ABI := armeabi-v7a
@@ -10,17 +28,32 @@ TARGET_CPU_VARIANT := krait
 TARGET_NO_BOOTLOADER := true
 
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_RAMDISK_OFFSET := 0x02000000
-BOARD_SECOND_OFFSET := 0x00f00000
-BOARD_TAGS_OFFSET := 0x01e00000
-BOARD_KERNEL_PAGE_SIZE := 2048
-BOARD_SECOND_SIZE := 0
-BOARD_DT_SIZE := 5058560
+BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.selinux=permissive androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
+
+# Flags
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP -DNO_SECURE_DISCARD
+COMMON_GLOBAL_CFLAGS += -DNEW_ION_API
+
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_USES_QCOM_BSP := true
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+TARGET_QCOM_AUDIO_VARIANT := caf
+TARGET_QCOM_DISPLAY_VARIANT := caf
+TARGET_QCOM_MEDIA_VARIANT := caf
+BOARD_USES_QC_TIME_SERVICES := true
+TARGET_NO_RPC := true
+
+# Compatibility with pre-kitkat Qualcomm sensor HALs
+SENSORS_NEED_SETRATE_ON_ENABLE := true
+
+# Radio
+TARGET_ADDITIONAL_BOOTCLASSPATH := WfdCommon:qcnvitems:qcrilhook
 
 # Shader cache config options
 # Maximum size of the GLES Shaders that can be cached for reuse.
@@ -34,9 +67,16 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 BOARD_USES_ALSA_AUDIO := true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
+BOARD_USES_FLUENCE_FOR_VOIP := true
+BOARD_USES_FLUENCE_INCALL := true
+BOARD_USES_SEPERATED_AUDIO_INPUT := true
+BOARD_USES_SEPERATED_VOICE_SPEAKER := true
+TARGET_USES_QCOM_COMPRESSED_AUDIO := true
+BOARD_HAVE_NEW_QCOM_CSDCLIENT := false
+BOARD_HAVE_LOW_LATENCY_AUDIO := true
 
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oppo/find7/bluetooth
 
 # Uses libqc-* static libraries from Qualcomm
@@ -49,7 +89,6 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
-BOARD_HAS_QCOM_WLAN_SDK          := true
 BOARD_WLAN_DEVICE                := qcwcn
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
@@ -107,15 +146,18 @@ BOARD_SEPOLICY_UNION += \
        device.te \
        file_contexts
 
-HAVE_ADRENO_SOURCE:= false
+#HAVE_ADRENO_SOURCE:= false
 
-OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
-TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+#OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
+#TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
 TARGET_TOUCHBOOST_FREQUENCY:= 1200
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+
+# Recovery
+TARGET_RECOVERY_FSTAB := device/oppo/find7/ramdisk/fstab.qcom
 
 # TWRP specific build flags
 DEVICE_RESOLUTION := 1080x1920

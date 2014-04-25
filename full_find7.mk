@@ -23,15 +23,6 @@ PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-ifeq ($(TARGET_BUILD_VARIANT),codefirex)
-# inherit some common cfX stuff
-$(call inherit-product, vendor/cfx/config/common_full_phone.mk)
-
-# Bootanimation
-PRODUCT_COPY_FILES += \
-    vendor/cfx/prebuilt/common/bootanimation/1080.zip:system/media/bootanimation.zip
-endif
-
 PRODUCT_NAME := full_find7
 PRODUCT_DEVICE := find7
 PRODUCT_BRAND := OPPO
@@ -39,4 +30,3 @@ PRODUCT_MODEL := Find 7
 PRODUCT_MANUFACTURER := OPPO
 
 $(call inherit-product, device/oppo/find7/device.mk)
-$(call inherit-product-if-exists, vendor/oppo/find7/find7-vendor.mk)
