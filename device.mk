@@ -123,7 +123,7 @@ PRODUCT_COPY_FILES += \
     device/oppo/find7/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     device/oppo/find7/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
     wcnss_service \
     crda \
     regulatory.bin \
@@ -146,42 +146,59 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     librs_jni
-
+    
+# Display - 1
 PRODUCT_PACKAGES += \
-    gralloc.msm8974 \
-    libgenlock \
     hwcomposer.msm8974 \
-    memtrack.msm8974 \
+    gralloc.msm8974 \
+    copybit.msm8974 \
+    memtrack.msm8974
+
+# Display - 2
+PRODUCT_PACKAGES += \
+    libgenlock \
+    libmemalloc \
+    liboverlay \
     libqdutils \
-    libqdMetaData
+    libI420colorconvert
 
+# OMX
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libstagefrighthw \
+    libOmxAacEnc \
+    libOmxAmrEnc \
     libOmxCore \
-    libmm-omxcore \
+    libOmxEvrcEnc \
+    libQcelp13Enc \
     libOmxVdec \
-    libOmxVdecHevc \
-    libOmxVenc
+    libOmxVenc \
+    libc2dcolorconvert \
+    libdashplayer \
+    libdivxdrmdecrypt \
+    libmm-omxcore \
+    libstagefrighthw
 
+# Audio
 PRODUCT_PACKAGES += \
-    audio.primary.msm8974 \
+    audiod \
     audio.a2dp.default \
-    audio.usb.default \
+    audio_policy.msm8974 \
+    audio.primary.msm8974 \
     audio.r_submix.default \
-    libaudio-resampler
+    audio.usb.default \
+    libaudio-resampler \
+    tinymix
 
 # Audio effects
-#PRODUCT_PACKAGES += \
-#    libqcomvisualizer \
-#    libqcomvoiceprocessing \
-#    libqcomvoiceprocessingdescriptors
-
-#PRODUCT_COPY_FILES += \
-#    device/oppo/find7/audio_effects.conf:system/vendor/etc/audio_effects.conf
-
 PRODUCT_PACKAGES += \
-    libqomx_core \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libqcomvoiceprocessingdescriptors
+
+PRODUCT_COPY_FILES += \
+    device/oppo/find7/audio_effects.conf:system/vendor/etc/audio_effects.conf
+
+#PRODUCT_PACKAGES += \
+#    libqomx_core \
 
 PRODUCT_PACKAGES += \
     keystore.msm8974
@@ -230,6 +247,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.composition.type=dyn
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=72 \
