@@ -64,9 +64,21 @@ PRODUCT_COPY_FILES += \
     device/oppo/find7/input/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
     device/oppo/find7/input/AVRCP.kl:system/usr/keylayout/AVRCP.kl
 
+# Audio policy
 PRODUCT_COPY_FILES += \
     device/oppo/find7/audio_policy.conf:system/etc/audio_policy.conf
 
+# Sound config for TAIKO
+PRODUCT_COPY_FILES += \
+    device/oppo/find7/snd_soc_msm/snd_soc_apq_Taiko_DB:system/etc/snd_soc_msm/snd_soc_apq_Taiko_DB \
+    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko:system/etc/snd_soc_msm/snd_soc_msm_Taiko \
+    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko_CDP:system/etc/snd_soc_msm/snd_soc_msm_Taiko_CDP \
+    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko_ES325:system/etc/snd_soc_msm/snd_soc_msm_Taiko_ES325 \
+    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko_Fluid:system/etc/snd_soc_msm/snd_soc_msm_Taiko_Fluid \
+    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko_liquid:system/etc/snd_soc_msm/snd_soc_msm_Taiko_liquid \
+    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko_OnePlus:system/etc/snd_soc_msm/snd_soc_msm_Taiko_OnePlus
+
+# Media configuration
 PRODUCT_COPY_FILES += \
     device/oppo/find7/media_codecs.xml:system/etc/media_codecs.xml \
     device/oppo/find7/media_profiles.xml:system/etc/media_profiles.xml
