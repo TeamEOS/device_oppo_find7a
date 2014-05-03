@@ -269,10 +269,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     e2fsck
 
-# for off charging mode - ???
-#PRODUCT_PACKAGES += \
-#    charger \
-#    charger_res_images
+# Offline charging mode
+PRODUCT_PACKAGES += \
+    charger_find7 \
+    charger_res_images_find7
 
 PRODUCT_PACKAGES += \
     bdAddrLoader
