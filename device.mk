@@ -38,6 +38,10 @@ PRODUCT_COPY_FILES += \
 # Target (Find7) ramfs bits
 PRODUCT_COPY_FILES += \
     device/oppo/find7/ramdisk/init.target.rc:root/init.target.rc
+    
+# QC IPC cfg
+PRODUCT_COPY_FILES += \
+    device/oppo/find7/ramdisk/etc/sec_config:root/etc/sec_config
 
 # TWRP fstab
 PRODUCT_COPY_FILES += \
