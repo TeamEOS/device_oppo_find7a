@@ -38,10 +38,6 @@ PRODUCT_COPY_FILES += \
 # Target (Find7) ramfs bits
 PRODUCT_COPY_FILES += \
     device/oppo/find7/ramdisk/init.target.rc:root/init.target.rc
-    
-# QC IPC cfg
-PRODUCT_COPY_FILES += \
-    device/oppo/find7/ramdisk/etc/sec_config:root/etc/sec_config
 
 # TWRP fstab
 PRODUCT_COPY_FILES += \
@@ -67,6 +63,10 @@ PRODUCT_COPY_FILES += \
     device/oppo/find7/input/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/oppo/find7/input/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
     device/oppo/find7/input/AVRCP.kl:system/usr/keylayout/AVRCP.kl
+    
+# QC IPC cfg
+PRODUCT_COPY_FILES += \
+    device/oppo/find7/configs/sec_config:system/etc/sec_config
 
 # Vendor keylayout
 PRODUCT_COPY_FILES += \
