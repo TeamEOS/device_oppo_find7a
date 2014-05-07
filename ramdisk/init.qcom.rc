@@ -49,26 +49,20 @@ on init
     mkdir /storage/sdcard0 0000 system system
     mkdir /storage/sdcard1 0000 system system
 
-    export EXTERNAL_STORAGE /storage/sdcard0
-    export SECONDARY_STORAGE /storage/sdcard1
-
+    # USB OTG (kitkat)
+    mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
+    mkdir /storage/usbdisk 0700 root root   
+    
+    # Legacy support
     symlink /storage/sdcard0 /sdcard
     symlink /storage/sdcard0 /mnt/sdcard
     symlink /storage/sdcard1 /mnt/sdcard2
-
-#Zhilong.Zhang@OnlineRd.Driver, 2013/11/09, Add for support OTG device
-    mkdir /storage/UDiskA 0000 system system
-    symlink /storage/UDiskA /mnt/UDiskA
-    mkdir /storage/UDiskB 0000 system system
-    symlink /storage/UDiskB /mnt/UDiskB
-    mkdir /storage/UDiskC 0000 system system
-    symlink /storage/UDiskC /mnt/UDiskC
-    mkdir /storage/UDiskD 0000 system system
-    symlink /storage/UDiskD /mnt/UDiskD
-    mkdir /storage/UDiskE 0000 system system
-    symlink /storage/UDiskE /mnt/UDiskE
-    mkdir /storage/UDiskF 0000 system system
-    symlink /storage/UDiskF /mnt/UDiskF                    
+    symlink /storage/usbdisk /usbdisk
+    symlink /storage/usbdisk /mnt/usbdisk     
+    
+    # Finally tell the system what is what
+    export EXTERNAL_STORAGE /storage/sdcard0
+    export SECONDARY_STORAGE /storage/sdcard1            
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
