@@ -193,16 +193,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hwcomposer.msm8974 \
     gralloc.msm8974 \
-    copybit.msm8974 \
     memtrack.msm8974
 
 # Display - 2
 PRODUCT_PACKAGES += \
     libgenlock \
-    libmemalloc \
-    liboverlay \
     libqdutils \
-    libI420colorconvert
+    libqdMetaData
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -214,21 +211,17 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libc2dcolorconvert \
-    libdashplayer \
     libdivxdrmdecrypt \
     libmm-omxcore \
     libstagefrighthw
 
 # Audio
 PRODUCT_PACKAGES += \
-    audiod \
     audio.a2dp.default \
-    audio_policy.msm8974 \
     audio.primary.msm8974 \
     audio.r_submix.default \
     audio.usb.default \
-    libaudio-resampler \
-    tinymix
+    libaudio-resampler
 
 # Audio effects
 PRODUCT_PACKAGES += \
@@ -239,8 +232,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/oppo/find7/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
-#PRODUCT_PACKAGES += \
-#    libqomx_core \
+PRODUCT_PACKAGES += \
+    libqomx_core \
 
 #PRODUCT_PACKAGES += \
 #    keystore.msm8974
