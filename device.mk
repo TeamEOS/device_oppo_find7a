@@ -45,17 +45,17 @@ PRODUCT_COPY_FILES += \
 
 # QCOM scripts
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/qcscripts/hsic.control.bt.sh:system/etc/hsic.control.bt.sh
-    device/oppo/find7/qcscripts/init.ath3k.bt.sh:system/etc/init.ath3k.bt.sh
-    device/oppo/find7/qcscripts/init.crda.sh:system/etc/init.crda.sh
-    device/oppo/find7/qcscripts/init.qcom.audio.sh:system/etc/init.qcom.audio.sh
-    device/oppo/find7/qcscripts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
-    device/oppo/find7/qcscripts/init.qcom.coex.sh:system/etc/init.qcom.coex.sh
-    device/oppo/find7/qcscripts/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh
-    device/oppo/find7/qcscripts/init.qcom.fm.sh:system/etc/init.qcom.fm.sh
-    device/oppo/find7/qcscripts/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh
-    device/oppo/find7/qcscripts/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh
-    device/oppo/find7/qcscripts/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh
+    device/oppo/find7/qcscripts/hsic.control.bt.sh:system/etc/hsic.control.bt.sh \
+    device/oppo/find7/qcscripts/init.ath3k.bt.sh:system/etc/init.ath3k.bt.sh \
+    device/oppo/find7/qcscripts/init.crda.sh:system/etc/init.crda.sh \
+    device/oppo/find7/qcscripts/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
+    device/oppo/find7/qcscripts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
+    device/oppo/find7/qcscripts/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
+    device/oppo/find7/qcscripts/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh \
+    device/oppo/find7/qcscripts/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
+    device/oppo/find7/qcscripts/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
+    device/oppo/find7/qcscripts/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
+    device/oppo/find7/qcscripts/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh \
     device/oppo/find7/qcscripts/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
 
 # Input device files for find7
