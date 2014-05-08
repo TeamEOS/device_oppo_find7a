@@ -24,5 +24,8 @@
 
     <!-- Flag indicating if the tty is enabled -->
     <bool name="tty_enabled">true</bool>
+    
+    <!-- Tell frameworks we can use LTE -->
+    <bool name="config_enabled_lte" translatable="false">true</bool>
 
 </resources>
