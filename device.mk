@@ -242,8 +242,8 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_PACKAGES += \
 #    libqomx_core \
 
-PRODUCT_PACKAGES += \
-    keystore.msm8974
+#PRODUCT_PACKAGES += \
+#    keystore.msm8974
 
 PRODUCT_PACKAGES += \
     power.msm8974
