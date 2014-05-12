@@ -54,7 +54,7 @@ TARGET_NO_RPC := true
 SENSORS_NEED_SETRATE_ON_ENABLE := true
 
 # Radio
-TARGET_ADDITIONAL_BOOTCLASSPATH := WfdCommon:qcnvitems:qcrilhook
+TARGET_ADDITIONAL_BOOTCLASSPATH := qcnvitems:qcrilhook
 
 # Shader cache config options
 # Maximum size of the GLES Shaders that can be cached for reuse.
