@@ -244,8 +244,8 @@ PRODUCT_PACKAGES += \
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/gps/gps.conf:system/etc/gps.conf
-    device/oppo/find7/gps/izat.conf:system/etc/izat.conf
+    device/oppo/find7/gps/gps.conf:system/etc/gps.conf \
+    device/oppo/find7/gps/izat.conf:system/etc/izat.conf \
     device/oppo/find7/gps/sap.conf:system/etc/sap.conf
 
 # NFC packages
