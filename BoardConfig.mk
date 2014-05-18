@@ -53,8 +53,8 @@ TARGET_NO_RPC := true
 # Compatibility with pre-kitkat Qualcomm sensor HALs
 SENSORS_NEED_SETRATE_ON_ENABLE := true
 
-# Radio
-TARGET_ADDITIONAL_BOOTCLASSPATH := qcnvitems:qcrilhook
+# RIL
+BOARD_RIL_CLASS := ../../../device/oppo/n1/ril/telephony/java/com/android/internal/telephony/QualcommMSIM42RIL.java
 
 # Shader cache config options
 # Maximum size of the GLES Shaders that can be cached for reuse.

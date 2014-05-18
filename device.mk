@@ -320,12 +320,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true
 
 # Networks
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    ro.telephony.default_network=10
-
-# Networks
 PRODUCT_PROPERTY_OVERRIDES += \
-    telephony.lteOnCdmaDevice=0
+    ro.telephony.ril_class=QualcommMSIM42RIL
 
 # set default USB configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
