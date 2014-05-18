@@ -68,6 +68,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/oppo/find7/configs/sec_config:system/etc/sec_config
 
+# QC sensor cfg
+PRODUCT_COPY_FILES += \
+    device/oppo/find7/configs/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf
+
 # Vendor keylayout
 PRODUCT_COPY_FILES += \
     device/oppo/find7/input/vendor/Vendor_1bad_Product_f016.kl:system/usr/keylayout/Vendor_1bad_Product_f016.kl \
