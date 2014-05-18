@@ -142,7 +142,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/configs/thermald-8974.conf:system/etc/thermald-8974.conf
+    device/oppo/find7/configs/thermald-8974.conf:system/etc/thermald-8974.conf \
     device/oppo/find7/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
 
 PRODUCT_TAGS += dalvik.gc.type-precise
