@@ -16,8 +16,6 @@
 
 BOARD_VENDOR := oppo
 
-USE_CAMERA_STUB := true
-
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
@@ -49,6 +47,10 @@ BOARD_USES_QCOM_HARDWARE := true
 #TARGET_QCOM_MEDIA_VARIANT := caf-new
 BOARD_USES_QC_TIME_SERVICES := true
 TARGET_NO_RPC := true
+
+# Camera
+COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
+USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Compatibility with pre-kitkat Qualcomm sensor HALs
 SENSORS_NEED_SETRATE_ON_ENABLE := true
