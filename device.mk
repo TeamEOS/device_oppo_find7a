@@ -192,37 +192,30 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     librs_jni
-    
-# Display - 1
-PRODUCT_PACKAGES += \
-    copybit.msm8974 \
-    gralloc.msm8974 \
-    hwcomposer.msm8974 \
-    memtrack.msm8974
 
-# Display - 2
+# Display
 PRODUCT_PACKAGES += \
     libgenlock \
-    libqdutils \
-    libqdMetaData
+    liboverlay \
+    hwcomposer.msm8974 \
+    gralloc.msm8974 \
+    copybit.msm8974 \
+    memtrack.msm8974
 
 # OMX
 PRODUCT_PACKAGES += \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libQcelp13Enc \
+    libmm-omxcore \
+    libdivxdrmdecrypt \
     libOmxVdec \
     libOmxVenc \
-    libc2dcolorconvert \
-    libdivxdrmdecrypt \
-    libmm-omxcore \
-    libstagefrighthw
+    libOmxCore \
+    libstagefrighthw \
+    libc2dcolorconvert
 
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
+    audio_policy.default \
     audio.primary.msm8974 \
     audio.r_submix.default \
     audio.usb.default \
@@ -330,10 +323,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
     rild.libargs=-d /dev/smd0
-
-# Qcom hardware
-PRODUCT_PROPERTY_OVERRIDES += \
-    com.qc.hardware=true
 
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
