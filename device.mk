@@ -309,6 +309,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true
 
+# Audio Configuration
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qc.sdk.audio.fluencetype=fluence \
+    ro.qc.sdk.audio.ssr=false \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.dualmic.config=endfire \
+    af.resampler.quality=4 \
+    audio.offload.buffer.size.kb=32 \
+    audio.offload.gapless.enabled=false \
+    av.offload.enable=true
+
+# Sensor Configuration
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qc.sdk.sensors.gestures=true
+
 # Networks
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=QualcommMSIM42RIL
