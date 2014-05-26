@@ -40,7 +40,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.selinux=permissive androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.selinux=permissive androidboot.hardware=find7 user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
@@ -103,7 +103,7 @@ WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 
 TARGET_BOARD_PLATFORM := msm8974
-TARGET_BOOTLOADER_BOARD_NAME := MSM8974
+TARGET_BOOTLOADER_BOARD_NAME := find7
 TARGET_BOARD_INFO_FILE := device/oppo/find7/board-info.txt
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 
@@ -129,9 +129,6 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 734003200
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-#TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-#TARGET_RECOVERY_FSTAB = device/oppo/find7/ramdisk/fstab.qcom
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/oppo/find7
 TARGET_OTA_ASSERT_DEVICE := Find7a,X9006
@@ -161,7 +158,7 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_TOUCHBOOST_FREQUENCY:= 1200
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/oppo/find7/ramdisk/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/oppo/find7/ramdisk/fstab.find7
 
 # TWRP specific build flags
 DEVICE_RESOLUTION := 1080x1920
