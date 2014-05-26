@@ -31,10 +31,6 @@ PRODUCT_COPY_FILES += \
     device/oppo/find7/ramdisk/fstab.find7:root/fstab.find7 \
     device/oppo/find7/ramdisk/ueventd.find7.rc:root/ueventd.find7.rc
 
-# Target (Find7) ramfs bits
-PRODUCT_COPY_FILES += \
-    device/oppo/find7/ramdisk/init.target.rc:root/init.target.rc
-
 # TWRP fstab
 PRODUCT_COPY_FILES += \
     device/oppo/find7/twrp.fstab:recovery/root/etc/twrp.fstab
