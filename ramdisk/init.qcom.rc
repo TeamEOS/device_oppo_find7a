@@ -28,11 +28,6 @@
 #Zhilong.Zhang@OnlineRd.Driver, 2013/10/05, Modify for define OPPO USB devices 
 import init.oppo.usb.rc
 
-#ifdef VENDOR_EDIT 
-#jiangyg@PM, 2013/10/21, add for OPPO devices 
-import init.oppo.rc
-#endif /* VENDOR_EDIT */
-
 import init.target.rc
 
 on early-init
@@ -83,6 +78,9 @@ on early-boot
     exec /system/bin/sh /init.qcom.syspart_fixup.sh ${ro.board.platform} ${ro.serialno}
 
 on boot
+    #Zhengpeng@OnLineRD.AirService.RIL, 2013/11/4, Add for create opponvitems dir
+	mkdir /data/opponvitems  0771 radio radio
+
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
@@ -332,7 +330,6 @@ on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
 on property:bluetooth.isEnabled=true
-    start btwlancoex
     write /sys/class/bluetooth/hci0/idle_timeout 7000
 
 on property:bluetooth.sap.status=running
@@ -401,26 +398,6 @@ service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
     user root
     oneshot
 
-service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
-    class late_start
-    user bluetooth
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
-on property:bluetooth.hciattach=true
-    start hciattach
-
-on property:bluetooth.hciattach=false
-    setprop bluetooth.status off
-
-service hciattach_ath3k /system/bin/sh /system/etc/init.ath3k.bt.sh
-     class late_start
-     user bluetooth
-     group system bluetooth net_bt_admin misc
-     disabled
-     oneshot
-
 service bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
     class late_start
     user bluetooth
@@ -485,13 +462,6 @@ on property:ro.use_data_netmgrd=false
 # but only if ro.data.large_tcp_window_size property is set.
 on property:ro.data.large_tcp_window_size=true
     write /proc/sys/net/ipv4/tcp_adv_win_scale  2
-
-service btwlancoex /system/bin/sh /system/etc/init.qcom.coex.sh
-    class late_start
-    user bluetooth
-    group bluetooth net_bt_admin inet net_admin net_raw
-    disabled
-    oneshot
 
 service amp_init /system/bin/amploader -i
     class late_start
@@ -634,13 +604,6 @@ service lowi-server /system/bin/lowi-server
     group gps net_admin wifi inet qcom_diag
     disabled
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
-    class late_start
-    user root
-    group system fm_radio
-    disabled
-    oneshot
-
 on property:crypto.driver.load=1
      insmod /system/lib/modules/qce.ko
      insmod /system/lib/modules/qcedev.ko
@@ -672,19 +635,6 @@ service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
     disabled
     oneshot
 
-service wifi-sdio-on /system/bin/sh /system/etc/init.qcom.sdio.sh
-    class late_start
-    group wifi inet
-    disabled
-    oneshot
-
-service wifi-crda /system/bin/sh /system/etc/init.crda.sh
-   class late_start
-   user root
-   disabled
-   oneshot
-
-
 on property:sys.boot_completed=1
     start qcom-post-boot
 
@@ -711,15 +661,6 @@ service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
     group root
     oneshot
     disabled
-
-service ds_fmc_appd /system/bin/ds_fmc_appd -p "rmnet0" -D
-    class late_start
-    group radio wifi inet
-    disabled
-    oneshot
-
-on property:persist.data.ds_fmc_app.mode=1
-    start ds_fmc_appd
 
 service ims_regmanager /system/bin/exe-ims-regmanagerprocessnative
     class late_start
@@ -821,24 +762,6 @@ service ssr_diag /system/bin/ssr_diag
     class late_start
     user system
     group system
-
-# SSR setting
-on property:persist.sys.ssr.restart_level=*
-    exec /system/bin/sh /init.qcom.ssr.sh ${persist.sys.ssr.restart_level}
-
-# Define fastmmi
-service fastmmi /system/bin/mmi
-    user root
-    group root
-    disabled
-
-service fastmmisrv /system/bin/sh /init.qcom.factory.sh
-    user root
-    disabled
-    oneshot
-
-on ffbm
-    start fastmmisrv
 
 service hvdcp /system/bin/hvdcp
     class core
