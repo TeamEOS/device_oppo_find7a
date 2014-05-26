@@ -53,7 +53,6 @@ PRODUCT_COPY_FILES += \
     device/oppo/find7/qcscripts/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
     device/oppo/find7/qcscripts/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh \
     device/oppo/find7/qcscripts/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
-    device/oppo/find7/qcscripts/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
     device/oppo/find7/qcscripts/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
     device/oppo/find7/qcscripts/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh \
     device/oppo/find7/qcscripts/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
