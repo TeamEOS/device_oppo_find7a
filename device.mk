@@ -16,24 +16,20 @@
 
 # OPPO ramfs bits
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/ramdisk/init.oppo.rc:root/init.oppo.rc \
-    device/oppo/find7/ramdisk/init.oppo.usb.rc:root/init.oppo.usb.rc
+    device/oppo/find7/ramdisk/init.find7.usb.rc:root/init.find7.usb.rc
 
 # QCOM ramfs bits
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/ramdisk/init.qcom.rc:root/init.qcom.rc \
+    device/oppo/find7/ramdisk/init.find7.rc:root/init.find7.rc \
     device/oppo/find7/ramdisk/init.qcom.sh:root/init.qcom.sh \
     device/oppo/find7/ramdisk/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
     device/oppo/find7/ramdisk/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
     device/oppo/find7/ramdisk/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
-    device/oppo/find7/ramdisk/init.qcom.factory.sh:root/init.qcom.factory.sh \
     device/oppo/find7/ramdisk/init.qcom.ril.sh:root/init.qcom.ril.sh \
-    device/oppo/find7/ramdisk/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
     device/oppo/find7/ramdisk/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
     device/oppo/find7/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh \
-    device/oppo/find7/ramdisk/init.qcom.wcnss3660.sh:root/init.qcom.wcnss3660.sh \
-    device/oppo/find7/ramdisk/fstab.qcom:root/fstab.qcom \
-    device/oppo/find7/ramdisk/ueventd.qcom.rc:root/ueventd.qcom.rc
+    device/oppo/find7/ramdisk/fstab.find7:root/fstab.find7 \
+    device/oppo/find7/ramdisk/ueventd.find7.rc:root/ueventd.find7.rc
 
 # Target (Find7) ramfs bits
 PRODUCT_COPY_FILES += \
@@ -45,16 +41,9 @@ PRODUCT_COPY_FILES += \
 
 # QCOM scripts
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/qcscripts/hsic.control.bt.sh:system/etc/hsic.control.bt.sh \
-    device/oppo/find7/qcscripts/init.ath3k.bt.sh:system/etc/init.ath3k.bt.sh \
-    device/oppo/find7/qcscripts/init.crda.sh:system/etc/init.crda.sh \
     device/oppo/find7/qcscripts/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
     device/oppo/find7/qcscripts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
-    device/oppo/find7/qcscripts/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
-    device/oppo/find7/qcscripts/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh \
-    device/oppo/find7/qcscripts/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
     device/oppo/find7/qcscripts/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
-    device/oppo/find7/qcscripts/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh \
     device/oppo/find7/qcscripts/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
 
 # Input device files for find7
