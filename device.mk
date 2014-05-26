@@ -335,6 +335,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
+# Platform
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.board.platform=msm8974
+
+# Serial
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.serialno=530ef047
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
     rild.libargs=-d /dev/smd0
