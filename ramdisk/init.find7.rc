@@ -29,20 +29,12 @@ import init.find7.usb.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
+    mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones
-    mkdir /system
-    mount ext4 /dev/block/mmcblk0p14 /system wait rw noatime noauto_da_alloc
-    mkdir /data
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/userdata /data wait rw nosuid noatime noauto_da_alloc
-    mkdir /cache
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/cache /cache wait rw nosuid noatime noauto_da_alloc
 
 on init
     # Set permissions for persist partition
     mkdir /persist 0771 system system
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persist /persist nosuid nodev noatime noauto_da_alloc
-    mkdir /firmware 0771 system system
-    mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro noatime noauto_da_alloc shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
 
     # See storage config details at http://source.android.com/tech/storage/
     mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
@@ -64,7 +56,23 @@ on init
     
     # Finally tell the system what is what
     export EXTERNAL_STORAGE /storage/sdcard0
-    export SECONDARY_STORAGE /storage/sdcard1            
+    export SECONDARY_STORAGE /storage/sdcard1
+
+on fs
+ 	mount_all ./fstab.find7
+
+    # Keeping following partitions outside fstab file. As user may not have
+    # these partition flashed on the device. Failure to mount any partition in fstab file
+    # results in failure to launch late-start class.
+
+    wait /dev/block/platform/msm_sdcc.1/by-name/cache	62
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/cache /cache nosuid nodev barrier=1
+
+    wait /dev/block/platform/msm_sdcc.1/by-name/persist
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persist /persist nosuid nodev barrier=1
+
+    wait /dev/block/platform/msm_sdcc.1/by-name/modem
+    mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB

@@ -344,4 +344,4 @@ PRODUCT_COPY_FILES += \
 vendor/eos/prebuilt/common/bootanimation/1080.zip:system/media/bootanimation.zip
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/oppo/find7/find7-vendor.mk)
+$(call inherit-product-if-exists, vendor/oppo/find7a/find7a-vendor.mk)
