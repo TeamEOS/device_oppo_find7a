@@ -99,7 +99,8 @@ PRODUCT_COPY_FILES += \
 # Media configuration
 PRODUCT_COPY_FILES += \
     device/oppo/find7/media_codecs.xml:system/etc/media_codecs.xml \
-    device/oppo/find7/media_profiles.xml:system/etc/media_profiles.xml
+    device/oppo/find7/media_profiles.xml:system/etc/media_profiles.xml \
+    device/oppo/find7/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
