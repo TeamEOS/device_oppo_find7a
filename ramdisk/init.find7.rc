@@ -855,7 +855,7 @@ service diag_mdlog_stop /system/bin/diag_mdlog -k
     oneshot
     
 # internal sdcard
-service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
+service fuse_sdcard0 /system/bin/sh /system/etc/init.sdcard_perms.sh
    class late_start
    disabled
 
