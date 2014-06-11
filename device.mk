@@ -22,12 +22,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/oppo/find7/ramdisk/init.find7.rc:root/init.find7.rc \
     device/oppo/find7/ramdisk/init.qcom.sh:root/init.qcom.sh \
-    device/oppo/find7/ramdisk/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
-    device/oppo/find7/ramdisk/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
-    device/oppo/find7/ramdisk/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
-    device/oppo/find7/ramdisk/init.qcom.ril.sh:root/init.qcom.ril.sh \
     device/oppo/find7/ramdisk/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
-    device/oppo/find7/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh \
     device/oppo/find7/ramdisk/fstab.find7:root/fstab.find7 \
     device/oppo/find7/ramdisk/ueventd.find7.rc:root/ueventd.find7.rc
 
@@ -37,9 +32,7 @@ PRODUCT_COPY_FILES += \
 
 # QCOM scripts
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/qcscripts/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
     device/oppo/find7/qcscripts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
-    device/oppo/find7/qcscripts/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
     device/oppo/find7/qcscripts/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
 
 # Input device files for find7
@@ -344,4 +337,4 @@ PRODUCT_COPY_FILES += \
 vendor/eos/prebuilt/common/bootanimation/1080.zip:system/media/bootanimation.zip
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/oppo/find7a/find7a-vendor.mk)
+$(call inherit-product-if-exists, vendor/oppo/find7/find7-vendor.mk)
