@@ -80,7 +80,7 @@ on early-boot
     # Allow subsystem (modem etc) debugging
     write /sys/module/subsystem_restart/parameters/enable_debug 1
     write /sys/kernel/boot_adsp/boot 1
-    exec /system/bin/sh /init.qcom.syspart_fixup.sh ${ro.board.platform} ${ro.serialno}
+    exec /system/bin/sh /init.qcom.syspart_fixup.sh msm8974 530ef047
 
 on boot
     #Zhengpeng@OnLineRD.AirService.RIL, 2013/11/4, Add for create opponvitems dir
