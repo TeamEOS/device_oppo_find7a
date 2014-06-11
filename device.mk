@@ -314,6 +314,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=QualcommMSIM42RIL
 
+# GPS communicates via QMI
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.gps.qmienabled=true
+
 # set default USB configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
