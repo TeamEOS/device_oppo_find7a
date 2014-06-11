@@ -511,6 +511,3 @@ case "$target" in
     *)
       ;;
 esac
-
-# Run audio init script
-/system/bin/sh /system/etc/init.qcom.audio.sh "$target" "$btsoc"
