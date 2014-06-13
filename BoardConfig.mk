@@ -55,9 +55,6 @@ TARGET_NO_RPC := true
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS -DOPPO_CAMERA_HARDWARE
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-# Compatibility with pre-kitkat Qualcomm sensor HALs
-SENSORS_NEED_SETRATE_ON_ENABLE := true
-
 # RIL
 BOARD_RIL_CLASS := ../../../device/oppo/n1/ril/telephony/java/com/android/internal/telephony/QualcommMSIM42RIL.java
 
