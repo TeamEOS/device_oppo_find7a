@@ -243,6 +243,10 @@ PRODUCT_PACKAGES += \
     charger_find7 \
     charger_res_images_find7
 
+# Device Settings
+PRODUCT_PACKAGES += \
+    Find7Settings
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
 
