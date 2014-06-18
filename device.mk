@@ -306,6 +306,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=QualcommMSIM42RIL
 
+# LTE
+PRODUCT_PROPERTY_OVERRIDES += \
+    telephony.lteOnGsmDevice=1 \
+    telephony.lteOnCdmaDevice=0
+
 # GPS communicates via QMI
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.gps.qmienabled=true
