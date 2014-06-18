@@ -80,7 +80,6 @@ on early-boot
     # Allow subsystem (modem etc) debugging
     write /sys/module/subsystem_restart/parameters/enable_debug 1
     write /sys/kernel/boot_adsp/boot 1
-    exec /system/bin/sh /init.qcom.syspart_fixup.sh msm8974 530ef047
 
 on boot
     #Zhengpeng@OnLineRD.AirService.RIL, 2013/11/4, Add for create opponvitems dir
@@ -256,6 +255,12 @@ on post-fs-data
     mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
+
+    chown system system /dev/wcnss_wlan
+    write /sys/module/wcnss_ssr_8960/parameters/enable_riva_ssr 1
+
+    # to observe dnsmasq.leases file for dhcp information of soft ap.
+    chown dhcp system /data/misc/dhcp
 
     # Create the directories used by CnE subsystem
     mkdir /data/connectivity 0771 system system
@@ -947,14 +952,17 @@ service imsdatadaemon /system/bin/imsdatadaemon
     group system wifi radio net_raw log qcom_diag net_admin
     disabled
 
+service wcnss-init /system/bin/sh /system/etc/init.qcom.wifi.sh
+    class main
+    user root
+    oneshot
+
 service wcnss-service /system/bin/wcnss_service
     class late_start
     user root
     group system wifi
+    disabled
     oneshot
-
-on property:wlan.driver.ath=0
-    start wcnss-service
 
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
