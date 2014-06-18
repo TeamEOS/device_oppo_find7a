@@ -238,7 +238,7 @@ PRODUCT_PACKAGES += \
     libion
 
 PRODUCT_PACKAGES += \
-    lights.find7
+    lights.msm8974
 
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
