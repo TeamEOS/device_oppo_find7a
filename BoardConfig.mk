@@ -55,6 +55,9 @@ TARGET_NO_RPC := true
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS -DOPPO_CAMERA_HARDWARE
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # RIL
 BOARD_RIL_CLASS := ../../../device/oppo/n1/ril/telephony/java/com/android/internal/telephony/QualcommMSIM42RIL.java
 
