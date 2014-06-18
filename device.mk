@@ -149,14 +149,7 @@ PRODUCT_COPY_FILES += \
     device/oppo/find7/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
-    wcnss_service \
-    crda \
-    regulatory.bin \
-    linville.key.pub.pem \
-    libwfcu \
-    conn_init \
-    WCNSS_qcom_cfg.ini \
-    WCNSS_qcom_wlan_nv.bin
+    wcnss_service
 
 PRODUCT_PACKAGES += \
     hostapd_default.conf \
