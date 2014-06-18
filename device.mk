@@ -22,7 +22,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/oppo/find7/ramdisk/init.find7.rc:root/init.find7.rc \
     device/oppo/find7/ramdisk/init.qcom.sh:root/init.qcom.sh \
-    device/oppo/find7/ramdisk/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
     device/oppo/find7/ramdisk/fstab.find7:root/fstab.find7 \
     device/oppo/find7/ramdisk/ueventd.find7.rc:root/ueventd.find7.rc
 
@@ -32,8 +31,7 @@ PRODUCT_COPY_FILES += \
 
 # QCOM scripts
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/qcscripts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
-    device/oppo/find7/qcscripts/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
+    device/oppo/find7/qcscripts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
 
 # Sdcard permission fixups
 PRODUCT_COPY_FILES += \
@@ -195,12 +193,13 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    audio_policy.default \
     audio.primary.msm8974 \
-    audio.r_submix.default \
+    audio_policy.msm8974 \
+    audio.a2dp.default \
     audio.usb.default \
-    libaudio-resampler
+    audio.r_submix.default \
+    libaudio-resampler \
+    audiod
 
 # Audio effects
 PRODUCT_PACKAGES += \
