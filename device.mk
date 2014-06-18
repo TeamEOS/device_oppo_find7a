@@ -229,8 +229,9 @@ PRODUCT_COPY_FILES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
-    nfc_nci.find7 \
-    NfcNci \
+    libnfc \
+    libnfc_jni \
+    Nfc \
     Tag
 
 PRODUCT_PACKAGES += \
