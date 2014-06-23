@@ -78,6 +78,16 @@ PRODUCT_COPY_FILES += \
     device/oppo/find7/input/vendor/Vendor_1689_Product_fe00.kl:system/usr/keylayout/Vendor_1689_Product_fe00.kl \
     device/oppo/find7/input/vendor/Vendor_2378_Product_100a.kl:system/usr/keylayout/Vendor_2378_Product_100a.kl
 
+# ACDB Loader calibration
+PRODUCT_COPY_FILES += \
+	device/oppo/find7/acdbloader/Bluetooth_cal.acdb:system/etc/Bluetooth_cal.acdb \
+	device/oppo/find7/acdbloader/General_cal.acdb:system/etc/General_cal.acdb \
+	device/oppo/find7/acdbloader/Global_cal.acdb:system/etc/Global_cal.acdb \
+	device/oppo/find7/acdbloader/Handset_cal.acdb:system/etc/Handset_cal.acdb \
+	device/oppo/find7/acdbloader/Hdmi_cal.acdb:system/etc/Hdmi_cal.acdb \
+	device/oppo/find7/acdbloader/Headset_cal.acdb:system/etc/Headset_cal.acdb \
+	device/oppo/find7/acdbloader/Speaker_cal.acdb:system/etc/Speaker_cal.acdb \
+
 # Audio policy
 PRODUCT_COPY_FILES += \
     device/oppo/find7/audio_policy.conf:system/etc/audio_policy.conf
