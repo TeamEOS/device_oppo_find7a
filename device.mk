@@ -31,7 +31,8 @@ PRODUCT_COPY_FILES += \
 
 # QCOM scripts
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/qcscripts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
+    device/oppo/find7/qcscripts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
+    device/oppo/find7/qcscripts/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
 
 # Sdcard permission fixups
 PRODUCT_COPY_FILES += \
@@ -149,6 +150,7 @@ PRODUCT_COPY_FILES += \
     device/oppo/find7/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
+    mac-update \
     wcnss_service
 
 PRODUCT_PACKAGES += \
