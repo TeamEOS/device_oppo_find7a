@@ -257,6 +257,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Find7Settings
 
+# msm_rng entropy feeder
+PRODUCT_PACKAGES += \
+    qrngd \
+    qrngp
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
 
