@@ -179,22 +179,22 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libgenlock \
-    liboverlay \
-    hwcomposer.msm8974 \
     gralloc.msm8974 \
-    copybit.msm8974 \
-    memtrack.msm8974
+    libgenlock \
+    hwcomposer.msm8974 \
+    memtrack.msm8974 \
+    libqdutils \
+    libqdMetaData
 
 # OMX
 PRODUCT_PACKAGES += \
-    libmm-omxcore \
-    libdivxdrmdecrypt \
-    libOmxVdec \
-    libOmxVenc \
-    libOmxCore \
+    libc2dcolorconvert \
     libstagefrighthw \
-    libc2dcolorconvert
+    libOmxCore \
+    libmm-omxcore \
+    libOmxVdec \
+    libOmxVdecHevc \
+    libOmxVenc
 
 # Audio
 PRODUCT_PACKAGES += \
