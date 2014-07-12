@@ -16,97 +16,97 @@
 
 # OPPO ramfs bits
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/ramdisk/init.find7.usb.rc:root/init.find7.usb.rc
+    device/oppo/find7a/ramdisk/init.find7a.usb.rc:root/init.find7a.usb.rc
 
 # QCOM ramfs bits
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/ramdisk/init.find7.rc:root/init.find7.rc \
-    device/oppo/find7/ramdisk/init.qcom.sh:root/init.qcom.sh \
-    device/oppo/find7/ramdisk/fstab.find7:root/fstab.find7 \
-    device/oppo/find7/ramdisk/ueventd.find7.rc:root/ueventd.find7.rc
+    device/oppo/find7a/ramdisk/init.find7a.rc:root/init.find7a.rc \
+    device/oppo/find7a/ramdisk/init.qcom.sh:root/init.qcom.sh \
+    device/oppo/find7a/ramdisk/fstab.find7a:root/fstab.find7a \
+    device/oppo/find7a/ramdisk/ueventd.find7a.rc:root/ueventd.find7a.rc
 
 # TWRP fstab
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/twrp.fstab:recovery/root/etc/twrp.fstab
+    device/oppo/find7a/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # QCOM scripts
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/qcscripts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
-    device/oppo/find7/qcscripts/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
+    device/oppo/find7a/qcscripts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
+    device/oppo/find7a/qcscripts/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
 
 # Sdcard permission fixups
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/qcscripts/init.sdcard_perms.sh:system/etc/init.sdcard_perms.sh
+    device/oppo/find7a/qcscripts/init.sdcard_perms.sh:system/etc/init.sdcard_perms.sh
 
-# Input device files for find7
+# Input device files for find7a
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/input/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/oppo/find7/input/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
-    device/oppo/find7/input/AVRCP.kl:system/usr/keylayout/AVRCP.kl
+    device/oppo/find7a/input/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/oppo/find7a/input/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
+    device/oppo/find7a/input/AVRCP.kl:system/usr/keylayout/AVRCP.kl
     
 # QC IPC cfg
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/configs/sec_config:system/etc/sec_config
+    device/oppo/find7a/configs/sec_config:system/etc/sec_config
 
 # QC sensor cfg
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/configs/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf
+    device/oppo/find7a/configs/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf
 
 # Vendor keylayout
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/input/vendor/Vendor_1bad_Product_f016.kl:system/usr/keylayout/Vendor_1bad_Product_f016.kl \
-    device/oppo/find7/input/vendor/Vendor_1bad_Product_f023.kl:system/usr/keylayout/Vendor_1bad_Product_f023.kl \
-    device/oppo/find7/input/vendor/Vendor_1bad_Product_f027.kl:system/usr/keylayout/Vendor_1bad_Product_f027.kl \
-    device/oppo/find7/input/vendor/Vendor_1bad_Product_f036.kl:system/usr/keylayout/Vendor_1bad_Product_f036.kl \
-    device/oppo/find7/input/vendor/Vendor_1d79_Product_0009.kl:system/usr/keylayout/Vendor_1d79_Product_0009.kl \
-    device/oppo/find7/input/vendor/Vendor_05ac_Product_0239.kl:system/usr/keylayout/Vendor_05ac_Product_0239.kl \
-    device/oppo/find7/input/vendor/Vendor_12bd_Product_d015.kl:system/usr/keylayout/Vendor_12bd_Product_d015.kl \
-    device/oppo/find7/input/vendor/Vendor_22b8_Product_093d.kl:system/usr/keylayout/Vendor_22b8_Product_093d.kl \
-    device/oppo/find7/input/vendor/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_028e.kl \
-    device/oppo/find7/input/vendor/Vendor_046d_Product_c21f.kl:system/usr/keylayout/Vendor_046d_Product_c21f.kl \
-    device/oppo/find7/input/vendor/Vendor_046d_Product_c216.kl:system/usr/keylayout/Vendor_046d_Product_c216.kl \
-    device/oppo/find7/input/vendor/Vendor_046d_Product_c219.kl:system/usr/keylayout/Vendor_046d_Product_c219.kl \
-    device/oppo/find7/input/vendor/Vendor_046d_Product_c294.kl:system/usr/keylayout/Vendor_046d_Product_c294.kl \
-    device/oppo/find7/input/vendor/Vendor_046d_Product_c299.kl:system/usr/keylayout/Vendor_046d_Product_c299.kl \
-    device/oppo/find7/input/vendor/Vendor_046d_Product_c532.kl:system/usr/keylayout/Vendor_046d_Product_c532.kl \
-    device/oppo/find7/input/vendor/Vendor_054c_Product_0268.kl:system/usr/keylayout/Vendor_054c_Product_0268.kl \
-    device/oppo/find7/input/vendor/Vendor_0079_Product_0011.kl:system/usr/keylayout/Vendor_0079_Product_0011.kl \
-    device/oppo/find7/input/vendor/Vendor_0583_Product_2060.kl:system/usr/keylayout/Vendor_0583_Product_2060.kl \
-    device/oppo/find7/input/vendor/Vendor_1038_Product_1412.kl:system/usr/keylayout/Vendor_1038_Product_1412.kl \
-    device/oppo/find7/input/vendor/Vendor_1689_Product_fd00.kl:system/usr/keylayout/Vendor_1689_Product_fd00.kl \
-    device/oppo/find7/input/vendor/Vendor_1689_Product_fd01.kl:system/usr/keylayout/Vendor_1689_Product_fd01.kl \
-    device/oppo/find7/input/vendor/Vendor_1689_Product_fe00.kl:system/usr/keylayout/Vendor_1689_Product_fe00.kl \
-    device/oppo/find7/input/vendor/Vendor_2378_Product_100a.kl:system/usr/keylayout/Vendor_2378_Product_100a.kl
+    device/oppo/find7a/input/vendor/Vendor_1bad_Product_f016.kl:system/usr/keylayout/Vendor_1bad_Product_f016.kl \
+    device/oppo/find7a/input/vendor/Vendor_1bad_Product_f023.kl:system/usr/keylayout/Vendor_1bad_Product_f023.kl \
+    device/oppo/find7a/input/vendor/Vendor_1bad_Product_f027.kl:system/usr/keylayout/Vendor_1bad_Product_f027.kl \
+    device/oppo/find7a/input/vendor/Vendor_1bad_Product_f036.kl:system/usr/keylayout/Vendor_1bad_Product_f036.kl \
+    device/oppo/find7a/input/vendor/Vendor_1d79_Product_0009.kl:system/usr/keylayout/Vendor_1d79_Product_0009.kl \
+    device/oppo/find7a/input/vendor/Vendor_05ac_Product_0239.kl:system/usr/keylayout/Vendor_05ac_Product_0239.kl \
+    device/oppo/find7a/input/vendor/Vendor_12bd_Product_d015.kl:system/usr/keylayout/Vendor_12bd_Product_d015.kl \
+    device/oppo/find7a/input/vendor/Vendor_22b8_Product_093d.kl:system/usr/keylayout/Vendor_22b8_Product_093d.kl \
+    device/oppo/find7a/input/vendor/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_028e.kl \
+    device/oppo/find7a/input/vendor/Vendor_046d_Product_c21f.kl:system/usr/keylayout/Vendor_046d_Product_c21f.kl \
+    device/oppo/find7a/input/vendor/Vendor_046d_Product_c216.kl:system/usr/keylayout/Vendor_046d_Product_c216.kl \
+    device/oppo/find7a/input/vendor/Vendor_046d_Product_c219.kl:system/usr/keylayout/Vendor_046d_Product_c219.kl \
+    device/oppo/find7a/input/vendor/Vendor_046d_Product_c294.kl:system/usr/keylayout/Vendor_046d_Product_c294.kl \
+    device/oppo/find7a/input/vendor/Vendor_046d_Product_c299.kl:system/usr/keylayout/Vendor_046d_Product_c299.kl \
+    device/oppo/find7a/input/vendor/Vendor_046d_Product_c532.kl:system/usr/keylayout/Vendor_046d_Product_c532.kl \
+    device/oppo/find7a/input/vendor/Vendor_054c_Product_0268.kl:system/usr/keylayout/Vendor_054c_Product_0268.kl \
+    device/oppo/find7a/input/vendor/Vendor_0079_Product_0011.kl:system/usr/keylayout/Vendor_0079_Product_0011.kl \
+    device/oppo/find7a/input/vendor/Vendor_0583_Product_2060.kl:system/usr/keylayout/Vendor_0583_Product_2060.kl \
+    device/oppo/find7a/input/vendor/Vendor_1038_Product_1412.kl:system/usr/keylayout/Vendor_1038_Product_1412.kl \
+    device/oppo/find7a/input/vendor/Vendor_1689_Product_fd00.kl:system/usr/keylayout/Vendor_1689_Product_fd00.kl \
+    device/oppo/find7a/input/vendor/Vendor_1689_Product_fd01.kl:system/usr/keylayout/Vendor_1689_Product_fd01.kl \
+    device/oppo/find7a/input/vendor/Vendor_1689_Product_fe00.kl:system/usr/keylayout/Vendor_1689_Product_fe00.kl \
+    device/oppo/find7a/input/vendor/Vendor_2378_Product_100a.kl:system/usr/keylayout/Vendor_2378_Product_100a.kl
 
 # ACDB Loader calibration
 PRODUCT_COPY_FILES += \
-	device/oppo/find7/acdbloader/Bluetooth_cal.acdb:system/etc/Bluetooth_cal.acdb \
-	device/oppo/find7/acdbloader/General_cal.acdb:system/etc/General_cal.acdb \
-	device/oppo/find7/acdbloader/Global_cal.acdb:system/etc/Global_cal.acdb \
-	device/oppo/find7/acdbloader/Handset_cal.acdb:system/etc/Handset_cal.acdb \
-	device/oppo/find7/acdbloader/Hdmi_cal.acdb:system/etc/Hdmi_cal.acdb \
-	device/oppo/find7/acdbloader/Headset_cal.acdb:system/etc/Headset_cal.acdb \
-	device/oppo/find7/acdbloader/Speaker_cal.acdb:system/etc/Speaker_cal.acdb \
+	device/oppo/find7a/acdbloader/Bluetooth_cal.acdb:system/etc/Bluetooth_cal.acdb \
+	device/oppo/find7a/acdbloader/General_cal.acdb:system/etc/General_cal.acdb \
+	device/oppo/find7a/acdbloader/Global_cal.acdb:system/etc/Global_cal.acdb \
+	device/oppo/find7a/acdbloader/Handset_cal.acdb:system/etc/Handset_cal.acdb \
+	device/oppo/find7a/acdbloader/Hdmi_cal.acdb:system/etc/Hdmi_cal.acdb \
+	device/oppo/find7a/acdbloader/Headset_cal.acdb:system/etc/Headset_cal.acdb \
+	device/oppo/find7a/acdbloader/Speaker_cal.acdb:system/etc/Speaker_cal.acdb \
 
 # Audio policy
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/audio_policy.conf:system/etc/audio_policy.conf
+    device/oppo/find7a/audio_policy.conf:system/etc/audio_policy.conf
 
 # Sound config for TAIKO
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/snd_soc_msm/snd_soc_apq_Taiko_DB:system/etc/snd_soc_msm/snd_soc_apq_Taiko_DB \
-    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko:system/etc/snd_soc_msm/snd_soc_msm_Taiko \
-    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko_CDP:system/etc/snd_soc_msm/snd_soc_msm_Taiko_CDP \
-    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko_ES325:system/etc/snd_soc_msm/snd_soc_msm_Taiko_ES325 \
-    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko_Fluid:system/etc/snd_soc_msm/snd_soc_msm_Taiko_Fluid \
-    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko_liquid:system/etc/snd_soc_msm/snd_soc_msm_Taiko_liquid \
-    device/oppo/find7/snd_soc_msm/snd_soc_msm_Taiko_OnePlus:system/etc/snd_soc_msm/snd_soc_msm_Taiko_OnePlus
+    device/oppo/find7a/snd_soc_msm/snd_soc_apq_Taiko_DB:system/etc/snd_soc_msm/snd_soc_apq_Taiko_DB \
+    device/oppo/find7a/snd_soc_msm/snd_soc_msm_Taiko:system/etc/snd_soc_msm/snd_soc_msm_Taiko \
+    device/oppo/find7a/snd_soc_msm/snd_soc_msm_Taiko_CDP:system/etc/snd_soc_msm/snd_soc_msm_Taiko_CDP \
+    device/oppo/find7a/snd_soc_msm/snd_soc_msm_Taiko_ES325:system/etc/snd_soc_msm/snd_soc_msm_Taiko_ES325 \
+    device/oppo/find7a/snd_soc_msm/snd_soc_msm_Taiko_Fluid:system/etc/snd_soc_msm/snd_soc_msm_Taiko_Fluid \
+    device/oppo/find7a/snd_soc_msm/snd_soc_msm_Taiko_liquid:system/etc/snd_soc_msm/snd_soc_msm_Taiko_liquid \
+    device/oppo/find7a/snd_soc_msm/snd_soc_msm_Taiko_OnePlus:system/etc/snd_soc_msm/snd_soc_msm_Taiko_OnePlus
 
 # Media configuration
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/media_codecs.xml:system/etc/media_codecs.xml \
-    device/oppo/find7/media_profiles.xml:system/etc/media_profiles.xml \
-    device/oppo/find7/mixer_paths.xml:system/etc/mixer_paths.xml
+    device/oppo/find7a/media_codecs.xml:system/etc/media_codecs.xml \
+    device/oppo/find7a/media_profiles.xml:system/etc/media_profiles.xml \
+    device/oppo/find7a/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -136,8 +136,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
 
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/configs/thermald-8974.conf:system/etc/thermald-8974.conf \
-    device/oppo/find7/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
+    device/oppo/find7a/configs/thermald-8974.conf:system/etc/thermald-8974.conf \
+    device/oppo/find7a/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -149,15 +149,15 @@ PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 DEVICE_PACKAGE_OVERLAYS := \
-    device/oppo/find7/overlay
+    device/oppo/find7a/overlay
 
 # WiFi
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/wifi/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
-    device/oppo/find7/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/oppo/find7/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
-    device/oppo/find7/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    device/oppo/find7/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+    device/oppo/find7a/wifi/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
+    device/oppo/find7a/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/oppo/find7a/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
+    device/oppo/find7a/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/oppo/find7a/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
     mac-update \
@@ -211,7 +211,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessingdescriptors
 
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/audio_effects.conf:system/vendor/etc/audio_effects.conf
+    device/oppo/find7a/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 PRODUCT_PACKAGES += \
     libqomx_core \
@@ -224,9 +224,9 @@ PRODUCT_PACKAGES += \
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    device/oppo/find7/gps/gps.conf:system/etc/gps.conf \
-    device/oppo/find7/gps/izat.conf:system/etc/izat.conf \
-    device/oppo/find7/gps/sap.conf:system/etc/sap.conf
+    device/oppo/find7a/gps/gps.conf:system/etc/gps.conf \
+    device/oppo/find7a/gps/izat.conf:system/etc/izat.conf \
+    device/oppo/find7a/gps/sap.conf:system/etc/sap.conf
 
 # NFC packages
 PRODUCT_PACKAGES += \
@@ -250,12 +250,12 @@ PRODUCT_PACKAGES += \
 
 # Offline charging mode
 PRODUCT_PACKAGES += \
-    charger_find7 \
-    charger_res_images_find7
+    charger_find7a \
+    charger_res_images_find7a
 
 # Device Settings
 PRODUCT_PACKAGES += \
-    Find7Settings
+    find7aSettings
 
 # msm_rng entropy feeder
 PRODUCT_PACKAGES += \

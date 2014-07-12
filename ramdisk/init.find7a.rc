@@ -25,7 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.find7.usb.rc
+import init.find7a.usb.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -59,7 +59,7 @@ on init
     export SECONDARY_STORAGE /storage/sdcard1
 
 on fs
- 	mount_all ./fstab.find7
+ 	mount_all ./fstab.find7a
 
     # Keeping following partitions outside fstab file. As user may not have
     # these partition flashed on the device. Failure to mount any partition in fstab file
@@ -830,7 +830,7 @@ service hcidump /system/bin/sh /system/etc/hcidump.sh
     disabled
     oneshot
 
-service charger /charger_find7
+service charger /charger_find7a
     class charger
 
 service ssr_diag /system/bin/ssr_diag

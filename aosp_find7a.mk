@@ -13,9 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-$(call inherit-product, device/oppo/find7/full_find7.mk)
+$(call inherit-product, device/oppo/find7a/full_find7a.mk)
 
-PRODUCT_NAME := aosp_find7
+PRODUCT_NAME := aosp_find7a
 
 PRODUCT_PACKAGES += \
     Launcher3

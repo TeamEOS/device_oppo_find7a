@@ -1,5 +1,5 @@
 LOCAL_PATH:= $(call my-dir)
-ifeq ($(TARGET_DEVICE),find7)
+ifeq ($(TARGET_DEVICE),find7a)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional

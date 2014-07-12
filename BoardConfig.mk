@@ -40,7 +40,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.selinux=permissive androidboot.hardware=find7 user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.selinux=permissive androidboot.hardware=find7a user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 
 # Flags
@@ -58,7 +58,7 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_PROVIDES_LIBLIGHT := true
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/oppo/find7/ril/telephony/java/com/android/internal/telephony/QualcommMSIM42RIL.java
+BOARD_RIL_CLASS := ../../../device/oppo/find7a/ril/telephony/java/com/android/internal/telephony/QualcommMSIM42RIL.java
 
 # Shader cache config options
 # Maximum size of the GLES Shaders that can be cached for reuse.
@@ -75,7 +75,7 @@ BOARD_USES_ALSA_AUDIO := true
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oppo/find7/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oppo/find7a/bluetooth
 
 # Uses libqc-* static libraries from Qualcomm
 BOARD_USES_LIBQC_OPT := true
@@ -97,10 +97,10 @@ WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 
 TARGET_BOARD_PLATFORM := msm8974
-TARGET_BOOTLOADER_BOARD_NAME := find7
-TARGET_BOARD_INFO_FILE := device/oppo/find7/board-info.txt
+TARGET_BOOTLOADER_BOARD_NAME := find7a
+TARGET_BOARD_INFO_FILE := device/oppo/find7a/board-info.txt
 
-BOARD_EGL_CFG := device/oppo/find7/egl.cfg
+BOARD_EGL_CFG := device/oppo/find7a/egl.cfg
 
 USE_OPENGL_RENDERER := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
@@ -122,15 +122,15 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE  := 33554432
 #BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_RELEASETOOLS_EXTENSIONS := device/oppo/find7
+TARGET_RELEASETOOLS_EXTENSIONS := device/oppo/find7a
 TARGET_OTA_ASSERT_DEVICE := Find7,Find7a,X9006,X9007
 
-#BOARD_HAL_STATIC_LIBRARIES := libdumpstate.find7
+#BOARD_HAL_STATIC_LIBRARIES := libdumpstate.find7a
 
 BOARD_SEPOLICY_DIRS += \
-       device/oppo/find7/sepolicy
+       device/oppo/find7a/sepolicy
 
-BOARD_CUSTOM_BOOTIMG_MK := device/oppo/find7/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/oppo/find7a/mkbootimg.mk
 
 # Define kernel config for inline building
 TARGET_KERNEL_CONFIG := find7_defconfig
@@ -150,7 +150,7 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_TOUCHBOOST_FREQUENCY:= 1200
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/oppo/find7/ramdisk/fstab.find7
+TARGET_RECOVERY_FSTAB := device/oppo/find7a/ramdisk/fstab.find7a
 
 # TWRP specific build flags
 DEVICE_RESOLUTION := 1080x1920

@@ -1,1 +1,1 @@
-require board=find7
+require board=find7a
