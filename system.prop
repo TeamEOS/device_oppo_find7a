@@ -39,12 +39,7 @@ ro.data.large_tcp_window_size=true
 #
 # system props for time-services
 #
-persist.timed.enable=true
-
-#
-# disable CABL
-#
-ro.qualcomm.cabl=0  
+persist.timed.enable=true 
 
 #
 # system prop for NFC DT
