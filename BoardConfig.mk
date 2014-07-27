@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Define kernel config for inline building
+TARGET_KERNEL_CONFIG := find7_defconfig
+
 # BT device name
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oppo/find7a/bluetooth
 
